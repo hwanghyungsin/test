@@ -1,0 +1,1055 @@
+@import url("reset.css");
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+    font-family: "Modern Avenue Demo";
+    src: url(../font/modern_avenue/Modern\ Avenue\ Demo.otf);
+
+}
+
+body{
+    width: 100%;
+  font-family: "Noto Sans", sans-serif;
+  overflow-x: hidden;
+  
+}
+
+
+
+/******* header ******/
+header{
+    width:100%;
+    background-color: #1D1D1B;
+    max-height:148px;
+
+    position:fixed;
+    z-index:999;
+    box-shadow: 5px 5px 10px rgba(55, 51, 19, 0.5);
+    
+}
+
+.header_i{
+    padding:0 100px;
+    padding-top:35px;
+    padding-bottom:15px;
+}
+
+
+
+.search{
+    border:none;
+    outline:none;
+    background-color: transparent;
+    display: block;
+}
+
+.header_logo{
+   display: flex;
+   justify-content: center;
+}
+.header_logo a{
+    display: block;
+    
+}
+
+.header_logo a:nth-child(2){
+    margin-top:6px;
+    margin-left:10px;
+}
+
+.header_icon{
+    display: flex;
+    justify-content: flex-end;
+    
+}
+.header_icon a{
+    margin:0 10px;
+    
+}
+.header_icon img{
+    width:fit-content;
+    height:fit-content;
+}
+
+.menubox{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    height:60px;
+    
+}
+.menu{
+    color:#fff;
+    display: flex;
+    /* justify-content: space-between; */
+    justify-content: center;
+    align-items: flex-end;
+    /* background-color: rgb(90, 188, 188); */
+    max-width:715px;
+}
+
+.menu li{
+    margin-left:40px;
+}
+.menu li:nth-child(1){
+    margin-left:0;
+}
+
+
+/* 햄버거메뉴 */
+.hammenu{
+    display: none;
+}
+.hammenu_i{
+    display: flex;
+    justify-content: flex-end;
+    padding-top:3px;
+}
+.ham_btn, .ham_x{
+    outline: none;
+    border: none;
+    background-color: transparent;
+
+}
+
+
+/* 클릭시 나타나는 ham menu */
+.ham_x{
+    /* margin-bottom:80px; */
+    margin-bottom:20px;
+    
+}
+
+nav{
+    position:relative;
+    z-index: 999;
+    overflow-y: auto;
+}
+.hammenu2{
+    max-width:400px;
+    width:80%;
+    min-height:100vh;
+    /* background-color: #1D1D1B; */
+    background-color: #AE9A64;
+    color:#fff;
+    font-size:16px;
+    font-weight: bold;
+    /* display: none; */
+    position:fixed;
+        top:0;
+        /* right:-100%; */
+        right:0;
+        
+
+    display: none;
+        
+}
+
+.hammenu2_i{
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-end; */
+
+    padding-top:25px;
+    padding-left:28px;
+    padding-right:20px;
+    padding-bottom:0;
+    
+}
+
+.ham_x_i{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hammenu2_i li{
+    margin-bottom:20px;
+    margin-right:15px;
+    
+}
+
+.hammenu2_icon{
+    display: flex;
+    justify-content: flex-end;
+    margin-right:25px;
+}
+
+.hammenu2_icon a{
+    margin:0 10px;
+    
+}
+
+
+/* 효과를 줄 가상의 css
+    위 검은 화면(영상, 사진등) 다 보고 내려오면
+    글자구역에 왔을 때 검은색 메뉴바가 내려와서 보임
+    */
+    .fix{
+        background-color: #1D1D1B;
+        color:#fff;
+        position:fixed;
+            top:-100px; /*우선 숨겨주기*/
+        left:0;
+
+        animation:top 1s; /* keyframe이름*/
+        animation-fill-mode: forwards;
+        /*animation-fill-mode : forwards
+          애니메이션이 끝난 후 그 지점에 그대로.*/
+        
+    }
+    @keyframes top{
+        /* 0%{top:100px} */
+        100%{
+            top:0;
+        }
+    }
+
+
+
+/******* main ******/
+main{
+    width:100%;
+    height:fit-content;
+    overflow: hidden;
+    padding-bottom:120px;
+    padding-top:228px;
+    /* header fixed값 148 + main 상단여백값 100 더함 */
+    position:relative;
+
+    overflow-x: hidden;
+    /* 이거 안 넣으니까 p태그 넘쳐서 폰사이즈로 봤을 때 여백생김. */
+}
+
+.main_i{
+    width:100%;
+    /* background-color: #AE9A64; */
+    padding:0 90px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+}
+.main_center{
+    display: flex;
+    justify-content: center;
+    
+    /* margin:140px;*/
+
+    /* width:750px;
+    height:800px;
+    background-image: url(../img/main_center.jpg);
+    
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: auto;
+    background-color: #E42313;
+    background-position: center; */
+}
+
+
+.main_left{
+    display: flex;
+    justify-content: left;
+
+    /* width:344px;
+    height: 344px;
+    background-image: url(../img/main_left.jpg);
+    
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:auto;
+    background-position: left; */
+    
+}
+
+
+.main_right{
+    display: flex;
+    justify-content: right;
+
+    /* width:344px;
+    height: 344px;
+    background-image: url(../img/main_left.jpg);
+    
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:auto;
+    background-position: right; */
+    
+}
+.main_center img, .main_left img, .main_right img{
+    box-shadow:10px 10px 20px #7b7b7b;
+}
+
+
+.main_name{
+    font-family: "Modern Avenue Demo";
+    /* font-size:150px; */
+    font-size:8rem;
+    color:#AE9A64;
+    position:absolute;
+        top:60%;
+        left:50%;
+    /* transform: translateX(-50%);
+        aos효과랑 겹쳐서 씹혀서 안 먹힘.*/
+    translate: -50%;
+    text-shadow: 1px 1px 5px #7c7c7c;
+    
+}
+
+.name_space{
+    /* float:right; */
+    padding-left:600px;
+}
+
+
+
+/* section에는 높이값 주지 말기 */
+
+/***** biography *****/
+#bio{
+    padding-top:200px;
+    padding-bottom:200px;
+    background-color: #eeeeee;
+    overflow-x: hidden;
+}
+
+#bio figure{
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 50% 50% 0 0;
+}
+
+
+.bio_title{
+    font-size:32px;
+    font-weight: bold;
+    color:#AE9A64;
+    margin-bottom:35px;
+}
+
+.bio_text{
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom:290px;
+}
+
+.bio_btn{
+    display: block;
+    float:right;
+
+    min-width:160px;
+    height:50px;
+
+    background-color: #1D1D1B;
+    color:#fff;
+    text-align: center;
+    line-height:50px;
+    font-weight: bold;
+    
+}
+
+
+
+  .btn_arrow {
+    margin-left: -20px;
+    
+    line-height:50px;
+    opacity: 0;
+    transition: opacity 0.4s ease, margin-left 0.4s ease;
+  }
+
+  .bio_btn:hover .btn_arrow {
+    opacity: 1;
+    margin-left: 5px;
+  }
+
+
+
+
+/***** schedule  *****/
+#schedule{
+    width:100%;
+    background-color: #1D1D1B;
+    padding:120px 0;
+    
+}
+
+.schedule_title{
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    color:#fff;
+    
+}
+
+.schedule_box{
+    max-width:558px;
+    height:90px;
+    display: flex;
+    align-content: center;
+    
+    position:relative;
+
+}
+
+.schedule_box:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition:0.5s;
+    /* border-left:1px solid#E42313; */
+
+}
+
+
+.redline{
+    width:3px;
+    height:90px;
+    background-color: #E42313;
+    position:absolute;
+    display: none;
+    
+}
+.schedule_box:hover .redline{
+    display: block;
+    transition:2s;
+}
+
+.month{
+    font-size: 24px;
+    font-weight: bold;
+    color:#fff;
+    margin-top:40px;
+    margin-bottom:30px;
+    
+}
+.day{
+    display: flex;
+    align-items: center;
+}
+.day_i{
+    font-size: 16px;
+    color:#1D1D1B;
+    border:1px solid #AE9A64;
+    border-radius: 100%;
+    width:60px;
+    height:60px;
+    background-color: #AE9A64;
+    text-align: center;
+    line-height: 60px;
+    font-size:24px;
+    font-weight: bold;
+    
+    margin-left:24px;
+    
+    
+}
+
+.schedule_contents{
+    color:#c8c8c8;
+    margin-left:14px;
+    margin-bottom:40px;
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+    height:100%;
+
+}
+
+
+
+.schedule_country{
+    font-weight: bold;
+    color:#fff;
+    /* margin-top:14px; */
+}
+
+.schedule_con_btm{
+    display: flex;
+    font-size: 14px;
+    margin-top:7px;
+    
+}
+
+.schdule_locbox{
+    display: flex;
+}
+
+.schedule_con_btm figure{
+    margin-left:10px;
+}
+
+.schedule_loc{
+    color:#888888;
+}
+
+
+
+
+.schedule_btn{
+    display: block;
+    float:right;
+    width:160px;
+    height:50px;
+    background-color: #c8c8c8;
+    color:#1D1D1B;
+    text-align: center;
+    line-height:50px;
+    font-weight: bold;
+    margin:0 auto;
+    margin-top:80px;
+}
+
+.schedule_btn:hover .btn_arrow {
+    opacity: 1;
+    margin-left: 5px;
+  }
+
+
+
+
+/***** videos *****/
+#videos{
+    padding:200px 0;
+}
+
+.videos_title{
+    font-size:24px;
+    font-weight: bold;
+    margin-bottom:30px;
+    line-height: 33px;
+    margin-top:50px;
+}
+
+.videos_text{
+    font-size:16px;
+    line-height: 30px;
+    margin-bottom:80px;
+}
+
+.videos_btn{
+    display: block;
+    float:right;
+    width:160px;
+    height:50px;
+    background-color: #AE9A64;
+    color:#fff;
+    text-align: center;
+    line-height:50px;
+    font-weight: bold;
+    margin:0 auto;
+
+}
+
+.videos_btn:hover .btn_arrow {
+    opacity: 1;
+    margin-left: 5px;
+  }
+
+
+
+.youtube{
+    /* width:752px;
+    height:485px;
+    영상에 고정값을 주니까 화면사이즈 줄였을 때 화면크기는 그대로인데, 영상만 줄어드는;;;불상사
+    */
+    display:flex;
+    justify-content: flex-end;
+
+    background-color: #222;
+    /* 기본 배경색을 어둡게 설정합니다. */
+    transition: background-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+
+.youtube:hover {
+    background-color: #000; /* 배경색을 어둡게 변경합니다. */
+  }
+
+.youtube:hover video {
+    filter: brightness(50%); /* 비디오를 어둡게 설정합니다. */
+  }
+
+  /* .video-controls {
+    position: absolute;
+        top: 50%;
+        left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    
+  }
+  .video-controls button{
+    background-color: transparent;
+    border:none;
+    outline: none;
+  }
+
+  .youtube:hover video {
+    filter: brightness(0.7);
+  }
+
+  .youtube:hover .video-controls {
+    opacity: 1;
+  } */
+/*  */
+
+
+
+video{
+    display: block;
+    width:100%;
+    max-width:100%;
+    position:relative;
+
+    width: 100%;
+      height: auto;
+      transition: filter 0.3s ease;
+}
+
+
+
+
+
+/*****news****/
+#news{
+    width:100%;
+    background-color: #1D1D1B;
+    padding-top:100px;
+    padding-bottom:110px;
+}
+
+.news_title{
+    color:#fff;
+    font-size:32px;
+    font-weight: bold;
+    margin-bottom:70px;
+}
+
+.news_text{
+    height:150px;
+    background-color: #c8c8c8;
+    padding:25px;
+}
+
+.news_contents{
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    transform: translateY(0);
+    display: block;
+    transition:0.5s;
+
+}
+
+.news_contents img{
+    filter:grayscale(100%);
+    transition: filter 0.5s, transform 0.5s;
+}
+
+.news_contents:hover img{
+    filter:grayscale(0);
+    transition: 1s;
+    
+}
+.news_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.news_text h4{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.news_text p{
+    font-size: 14px;
+    color:#838383;
+    margin-top:8px;
+}
+
+.readmore_btn{
+    /* margin-top:42px; */
+    display: block;
+}
+
+.news_btn{
+    display: block;
+    width:160px;
+    height:50px;
+    background-color: #AE9A64;
+    color:#fff;
+    text-align: center;
+    line-height:50px;
+    font-weight: bold;
+    margin:0 auto;
+    margin-top:100px;
+}
+
+/* .news_btn:hover{
+    width:180px;
+    transition: 0.5s ease;
+} */
+
+.news_btn:hover .btn_arrow {
+    opacity: 1;
+    margin-left: 5px;
+  }
+
+
+
+
+
+
+/*****recordings*****/
+#recordings{
+    padding-bottom:150px;
+    background-color: #eeeeee;
+    overflow-x: hidden;
+}
+
+.recordings_title{
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    color:#AE9A64;
+    margin-top:150px;
+    margin-bottom:60px;
+}
+
+.albumbox{
+    width:100%;
+    height:fit-content;
+    padding-top:40px;
+    /* display: flex;
+    justify-content: center; */
+}
+
+.album{
+   margin: 0 20px;
+}
+
+
+.album p{
+    margin-top:8px;
+    text-align: center;
+}
+
+.recordings_btn{
+    display: block;
+    width:216px;
+    height:50px;
+    background-color: transparent;
+    color:#1D1D1B;
+    text-align: center;
+    line-height:50px;
+    font-weight: bold;
+    border:1px solid#1D1D1B;
+    margin:0 auto;
+    margin-top:100px;
+}
+
+.recordings_btn:hover .btn_arrow {
+    opacity: 1;
+    margin-left: 5px;
+  }
+
+
+/****footer*****/
+footer{
+    width:100%;
+    background-color: #1D1D1B;
+    color:#c8c8c8;
+    
+    padding:55px 0;
+}
+
+.contact{
+    
+}
+
+.mailbox{
+    display: flex;
+    margin-top:5px;
+    
+}
+#email{
+    max-width:250px;
+    max-height:50px;
+    padding:0 15px;
+    border:none;
+    outline:none;
+    background-color:#fff;
+}
+
+
+
+
+.submit_btn{
+    width:50px;
+    height:50px;
+    background-color:#fff;
+    border:none;
+    outline:none;
+    font-size:24px;
+    color:#535353;
+}
+
+
+
+.footer_icon{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer_icon a{
+    display: block;
+    margin:0 10px;
+}
+
+
+.footer_menu{
+    margin-top:100px;
+    margin-bottom:28px;
+}
+
+.footer_menu span{
+    margin-right:20px;
+}
+
+.footer_logo{
+    margin-top:50px;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+
+
+
+
+
+/***** 미디어쿼리 *****/
+
+@media screen and (max-width:1450px){
+
+    .name_space{
+        padding-left:500px;
+    }
+   
+}
+
+@media screen and (max-width:1200px){
+
+
+    .videos_title{
+        margin-top:0px;
+    }
+    .videos_text{
+        margin-bottom:50px;
+    }
+
+    .schedule_con_btm{
+        flex-direction: column;
+        
+    }
+
+    .schdule_locbox{
+        padding-top:3px;
+    }
+
+    .schedule_con_btm figure{
+        margin-left:0;
+    }
+
+    .bio_text{
+        margin-bottom:270px;
+    }
+   
+}
+
+@media screen and (max-width:991px){
+    main{
+        padding-top:130px;
+    }
+
+    
+
+    .bio_text{
+        margin-bottom:100px;
+    }
+
+    .videos_title{
+        margin-top:50px;
+    }
+    .videos_text{
+        margin-bottom:80px;
+    }
+
+        /* header */
+        header{
+            height:80px;
+        }
+    
+        .header_i{
+            padding:25px 15px;
+        }
+    
+        .hammenu{
+            display: block;   
+        }
+    
+        .namelogo_del, .icon_del, .menu_del{display: none;}
+
+    .footer_menu span{
+        margin-right:10px;
+    }
+
+}
+
+@media screen and (max-width:767px){
+   
+    main{
+        padding-top:80px;
+        padding-bottom:0;
+    }
+
+    .main_i{
+        background-image: url(../img/main_center.jpg);
+        width:100%;
+        height:100vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+
+
+    .main_center{
+        display: none;
+    }
+    .main_left{
+        display: none;
+    }
+
+    .main_right{
+        display: none;
+    }
+
+    .name_space{
+        padding-left:500px;
+    }
+    .name_name{
+        font-size:7rem;
+    }
+   
+
+    .bio_del{
+        display: none;
+    }
+
+    #bio{
+        background-image: url(../img/bio2.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        
+    }
+
+    
+
+    .schdule_locbox{
+        padding-top:0;
+    }
+
+    .march_del{
+        display: none;
+    }
+    
+    .news_text{
+        padding:18px;
+    }
+
+    .news_text_sub h4{
+        max-height:29px;
+        overflow: hidden;
+        font-size:14px;
+    }
+    .readmore_btn{
+        font-size:14px;
+    }
+
+
+
+    .footer_left{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .footer_right{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .footer_icon{
+        display: flex;
+        justify-content: center;
+    }
+    
+    
+    .footer_logo{
+        margin-bottom:80px;
+        display: flex;
+        justify-content: center;
+    
+    }
+
+    .footer_menubox{
+        text-align: center;
+    }
+
+    
+
+}
+
+@media screen and (max-width:575px){
+
+    .main_name{
+        
+       
+    }
+    
+    .news_del{
+        display: none;
+    }
+
+    .album figure{
+        margin:auto;
+    }
+
+    
+    }
+
+    
+
+@media screen and (max-width:400px){
+    .name_name{
+        
+    }
+
+    .albumbox{
+       
+     }
+
+
+}
